@@ -6,8 +6,10 @@ module.exports = {
   extends: ["eslint:recommended", "prettier"],
   overrides: [
     {
+      files: ["**/*.test.js"],
       env: {
         node: true,
+        jest: true,
       },
       files: [".eslintrc.{js,cjs}"],
       parserOptions: {
@@ -19,5 +21,6 @@ module.exports = {
     ecmaVersion: "latest",
     sourceType: "module",
   },
+  plugins: ["jest"],
   rules: {},
 };
